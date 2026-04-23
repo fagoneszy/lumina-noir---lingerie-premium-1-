@@ -41,7 +41,7 @@ export const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="text-brand-pink font-bold uppercase tracking-[0.3em] text-sm mb-4 block">
-              Coleção Midnight Essence
+              Coleção exclusiva para a sua melhor versão
             </span>
             <h1 className="text-5xl md:text-8xl font-serif italic mb-8 leading-[1.1]">
               A Elegância do <span className="text-white not-italic font-sans font-bold block md:inline">Ouro Negro</span>
