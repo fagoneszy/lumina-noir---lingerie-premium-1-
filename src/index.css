@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-brand-black: #000000;
+  --color-brand-pink: #ff007f;
+  --color-brand-lilac: #b19cd9;
+  --color-brand-white: #ffffff;
+  --color-brand-dark-gray: #121212;
+  
+  --shadow-neon-pink: 0 0 15px rgba(255, 0, 127, 0.4);
+  --shadow-neon-lilac: 0 0 15px rgba(177, 156, 217, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white antialiased selection:bg-brand-pink/30;
+    scroll-behavior: smooth;
+  }
+}
+
+.glass-morphism {
+  @apply bg-brand-black/80 backdrop-blur-md border border-white/10;
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
+}
+
+.btn-primary {
+  @apply bg-brand-pink text-white font-semibold px-6 py-3 rounded-full transition-all hover:scale-105 active:scale-95 shadow-neon-pink;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-brand-lilac text-brand-lilac font-semibold px-6 py-3 rounded-full transition-all hover:bg-brand-lilac hover:text-brand-black;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-pink/20 rounded-full hover:bg-brand-pink/40;
+}
